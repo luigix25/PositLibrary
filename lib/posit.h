@@ -65,7 +65,7 @@ public:
     Posit operator*(const Posit&op);
     Posit operator/(const Posit&op);
     bool operator==(const Posit&op);
-    friend ostream& operator<<(ostream&, const Posit&);
+    friend ostream& operator<<(ostream&, Posit&);
 
     operator float();
     operator double();

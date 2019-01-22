@@ -1104,6 +1104,7 @@ bool Posit::operator==(const Posit& op){
 
 }
 
+
 ostream& operator<<(ostream& os, Posit& a){   		//col const da errori
    	os<<a.subconv();
     return os;

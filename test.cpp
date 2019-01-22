@@ -118,78 +118,26 @@ float generateNumber(){			//numeri fra -30 e 30
 int main(int argc, char *argv[])
 {
 
-	vector<float> randomNumbers(N);
+	//vector<float> randomNumbers(N);
 
 	auto p = Posit(32, 0);
-	float random;
+	auto p2 = Posit(32, 0);
+
+//	float random;
 	
-	float numero_s = 0;
-	float numero_n = 0;	
+//	random = 0.3;
 
-//	while(1){
-		//cin>>random;
+	p.set(0.2);
+	p2.set(2.5);
+	auto p3 = p+p2;
 
+	cout<<p<<endl;
+	cout<<p2<<endl;
+	cout<<p3<<endl;
 
-		for(float i=-N;i<N;i+=0.001){
-			p.set(i);
-		
-			//cout<<"Iniziale"<<endl;
-			//p.print();
-
-			auto p2 = p.div_p2(5);
-			float result = p2.subconv();
-			//p2.print();
-
-			float proof = i/32;
-			//float proof = i*64;
-		
-			auto p3 = Posit(32,0);
-			p3.set(proof);
-	//		cout<<"O"<<endl<<bitset<32>(p3.getBits())<<endl<<endl;
-			//p3.print();
-
-			//cout<<"diff "<<result-proof<<endl;
-			float diff = fabs(result-proof);
-
-			if(result == proof or ((diff) < 0.005)){
-				//cout<<"OK"<<endl;
-				//cout<<result<<endl;
-				numero_s++;
-			//	cout<<"OK"<<endl;
-			}
-			else {
-				numero_n++;
-				
-
-				cout<<i<<" Posit: "<<result<<" Float: "<<proof<<endl<<endl;
-				//p.print();					
-				cout<<"FINALE"<<endl;
-				p2.print();
-
-				cout<<"UFFICIALE"<<endl;
-				p3.print();
-		
-				break;
-			}		
-
-		}
-
-
-		float n = numero_s + numero_n;
-		cout<<"perc si "<<(numero_s/n)<<endl;
-
-		//p2.print();
-		//p2.set(0.75);
-
-
-
-		//p2 = p.div_p2(4);
-		//cout<<random<<"/4 = "<<p2.subconv()<<endl;
-		//p2.print();
-
-
-	//}    
-	
+//	auto p3 = p*p2;
+//	cout<<p3.sigmoid()<<endl;
+	//cout<<p+p2<<endl;
 	
 
    
